@@ -24,7 +24,17 @@
 
 
 // adding/removing property
+// circle.location = { x: 1 };
 
+// const propertyName = 'location';
+
+
+
+// circle['location']  = {y:2};
+
+// delete circle.location;
+
+// enumearting properties
 function Circle(radius) {
     // console.log('this', this);
     this.radius = radius;
@@ -35,12 +45,14 @@ function Circle(radius) {
 
 const circle = new Circle(10);
 
-circle.location = { x: 1 };
+for(let key in circle){
+    if(typeof circle[key] !== 'function')
+    console.log(key,circle[key]);
+}
 
-const propertyName = 'location';
+const keys = Object.keys(circle);
 
+console.log(keys);
 
-
-circle['location']  = {y:2};
-
-delete circle.location;
+if('radius' in circle)
+    console.log('circle has a radius');
