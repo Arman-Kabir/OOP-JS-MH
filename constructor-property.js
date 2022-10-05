@@ -1,12 +1,5 @@
-// let x = {};
-
-// let x = new Object();
-
-
-
 
 // Functions are objects ...26m
-
 
 // constructor function
 function Circle(radius) {
@@ -23,8 +16,14 @@ this.radius = radius;
         console.log('draw');
     }
 `);
+
 const circle = new Circle1(1);
 
 const another = new Circle(1);
 
+
+
+// adding/removing constructors
+
+ 
 
